@@ -20,8 +20,9 @@ $(document).ready(function() {
     $('.tweet-compose').change(countDown);
     
     $('#tweet-submit').on('click', function() {
-   		var tweetStuff = $('#tweet-content').clone();
-   		$(tweetStuff).find('.tweet-compose').prepend('#stream');
-
+   		var tweetStuff = $('#profile-summary').clone();
+   		var tweetWords = $('.tweet-compose').val();
+   		$('#stream').prepend(tweetStuff, tweetWords);
+   		$('.tweet-compose').val('');
     });
 });
