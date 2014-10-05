@@ -25,4 +25,12 @@ $(document).ready(function() {
    		$('#stream').prepend(tweetStuff, tweetWords);
    		$('.tweet-compose').val('');
     });
+    $('.tweet-actions').hide();
+    $('.tweet').hover(function() 
+    	{$('.tweet-actions').show()}, function() 
+    	{$('.tweet-actions').hide()})
+    $('.stats').hide();
+    $('.tweet').on('click', function() {
+    	$('.stats').show();
+    });
 });
